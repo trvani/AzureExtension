@@ -1,0 +1,49 @@
+{
+    "manifestVersion": 1,
+    "id": "trani",
+    "version": "1.0.0",
+    "name": "Your Extension Name",
+    "publisher": "trani",
+    "description": "Description of your extension",
+    "public": true,
+    "categories": ["Azure Repos"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services.Cloud"
+        }
+    ],
+    "icons": {
+        "default": "images/icon.png"
+    },
+    "content":{
+        "details":{
+            "path": "overview.md"
+        }
+    },
+    "files": [
+        {
+            "path": "images",
+            "addressable": true
+        },
+        {
+            "path": "_tasks"
+        }
+        
+    ],
+    "contributions": [
+        {
+            "id": "helloWorld",
+            "type": "ms.vss-web.action",
+            "targets": [
+                "ms.vss-code-web.code-explorer-toolbar"
+            ],
+            "properties": {
+                "title": "Hello World",
+                "group": "actions",
+                "uri": "helloWorld.html"
+            }
+        }
+    ]
+}
+
+
